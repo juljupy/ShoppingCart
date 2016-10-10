@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Carrito de Compras | Rappi</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/modal/modal.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript" src="js/modal.js"></script>
+	<script type="text/javascript" src="js/framework/6.0.1/ext.js"></script>
+	<script type="text/javascript" src="js/framework/6.0.1/ext-all.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.1/ext-all-debug.js"></script> -->
+	<!-- Models -->
+	<script type="text/javascript" src="js/app/model/CategoryModel.js"></script>
+	<script type="text/javascript" src="js/app/model/ProductModel.js"></script>
+	<script type="text/javascript" src="js/app/model/ProductCartModel.js"></script>
+
+	<!-- Stores -->
+	<script type="text/javascript" src="js/app/store/CategoryStore.js"></script>
+	<script type="text/javascript" src="js/app/store/ProductStore.js"></script>
+	<script type="text/javascript" src="js/app/store/ProductCartStore.js"></script>
+
+	<!-- Views -->
+	<script type="text/javascript" src="js/app/view/ProductListViewController.js"></script>
+	<script type="text/javascript" src="js/app/view/ProductList.js"></script>
+	<script type="text/javascript" src="js/app/view/ProductCartListViewController.js"></script>
+	<script type="text/javascript" src="js/app/view/ProductCartList.js"></script>
+	<script type="text/javascript" src="js/app/view/CategoryComboViewController.js"></script>
+	<script type="text/javascript" src="js/app/view/CategoryCombo.js"></script>
+	<script type="text/javascript" src="js/app/view/ProductDetails.js"></script>
+
+
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+	<header class="main-header">
+		<section>
+			<a id="shopping-cart" href="" class="fa fa-shopping-cart">&nbsp;<span id="badge-cart" class="badge"></span></a>
+		</section>
+	</header> <!-- header -->
+
+	<section id="filters" class="layout">
+		<div id="categories">
+			Categorías: 
+			<select id="category_select">
+				<!-- <option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option> -->
+			</select> 
+		</div>
+		<div>
+			<ul class="reorder">
+				<li>
+					<i class="fa fa-sort"></i>
+				</li>
+				<li>
+					<a href="#" id="sort_name">Nombre</a>
+				</li>
+				<li>
+					<a href="#" id="sort_price">Precio</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul class="reorder">
+				<li>
+					<i class="fa fa-filter"></i>
+				</li>
+				<li><a href="#" id="available">Disponible</a></li>
+				<li><a href="#" id="not_available">Agotado</a></li>
+				<li><a href="#" id="best_seller">Más vendidos</a></li>
+				<li><a href="#" id="max">Mayor a $30.000</a></li>
+				<li><a href="#" id="min">Menor a $10.000</a></li>
+			</ul>
+		</div>
+		<div><i class="fa fa-search"></i> <input id="search_product" type="text" placeholder="Buscar producto"></input></div>
+		<div><i class="fa fa-trash"></i><a href="#" id="clear_filters"> Quitar filtros</a>
+	</section>
+
+	<section>
+		<div id="products_container"></div>
+	</section>
+
+	<section class="modal--show" id="modal-text-cart" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+		<div id="products_cart_container"></div>
+		<a href="#!" class="modal-close" title="Cerrar ventana" data-close="Cerrar" data-dismiss="modal">?</a>
+	</section>
+
+	<section class="modal--show" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+		<div id="product_details"></div>
+		<a href="#!" class="modal-close" title="Cerrar ventana" data-close="Cerrar" data-dismiss="modal">?</a>
+	</section>
+
+	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>
